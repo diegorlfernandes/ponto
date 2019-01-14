@@ -20,3 +20,14 @@ C:\PontoSenac\bin\Debug\netcoreapp2.1\ponto.dll
 C:\PontoSenac\bin\Debug\netcoreapp2.1\ponto.pdb
 C:\PontoSenac\obj\Debug\netcoreapp2.1\ponto.dll
 C:\PontoSenac\obj\Debug\netcoreapp2.1\ponto.pdb
+C:\projetos\ponto\obj\Debug\netcoreapp2.1\ponto.csprojAssemblyReference.cache
+C:\projetos\ponto\obj\Debug\netcoreapp2.1\ponto.csproj.CoreCompileInputs.cache
+C:\projetos\ponto\obj\Debug\netcoreapp2.1\ponto.AssemblyInfoInputs.cache
+C:\projetos\ponto\obj\Debug\netcoreapp2.1\ponto.AssemblyInfo.cs
+C:\projetos\ponto\obj\Debug\netcoreapp2.1\ponto.dll
+C:\projetos\ponto\obj\Debug\netcoreapp2.1\ponto.pdb
+C:\projetos\ponto\bin\Debug\netcoreapp2.1\ponto.deps.json
+C:\projetos\ponto\bin\Debug\netcoreapp2.1\ponto.runtimeconfig.json
+C:\projetos\ponto\bin\Debug\netcoreapp2.1\ponto.runtimeconfig.dev.json
+C:\projetos\ponto\bin\Debug\netcoreapp2.1\ponto.dll
+C:\projetos\ponto\bin\Debug\netcoreapp2.1\ponto.pdb

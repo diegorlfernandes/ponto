@@ -9,13 +9,13 @@ namespace ponto
 {
     public class BatidasDiaPadrao
     {
-        public DateTime Entrada1 { get; private set; }
-        public DateTime Saida1 { get; private set;}
-        public DateTime Entrada2 { get; private set;}
-        public DateTime Saida2 { get; private set;}
-        public int tolerancia { get; private set;}
-        private string diretorio;
-        private string arquivo;
+        public DateTime Entrada1 { get; protected set; }
+        public DateTime Saida1 { get; protected set;}
+        public DateTime Entrada2 { get; protected set;}
+        public DateTime Saida2 { get; protected set;}
+        public int tolerancia { get; protected set;}
+        protected string diretorio;
+        protected string arquivo;
 
 
         public BatidasDiaPadrao(string data,string _diretorio,string _arquivo)

@@ -9,6 +9,7 @@ namespace ponto
 {
     public class Ponto
     {
+        private static StringBuilder extratoAleatorio = new StringBuilder();
         private static StringBuilder compensacao = new StringBuilder();
         private static StringBuilder horasExtras = new StringBuilder();
         private static StringBuilder avisos = new StringBuilder();
@@ -23,7 +24,7 @@ namespace ponto
         {
             diretorio = _diretorio;
             arquivo = _arquivo;
-            CabecalhoBatidasNaoRegistradas();
+            // CabecalhoBatidasNaoRegistradas();
 
         }
 
@@ -171,6 +172,26 @@ namespace ponto
 
             if (totalHorasHextra > 120)
                 avisos.AppendLine($"data: {batidasDia.Data.Day}/{mes} quantidade de horas extras excedida nesta data.");
+
+        }
+        public static void gerarExtratoAleatorio(DateTime inicio, DateTime fim)
+        {
+            foreach (DateTime day in Util.EachDay(inicio, fim))
+            {
+                string dia = day.Day.ToString().PadLeft(2, '0');
+                string mes = day.Month.ToString().PadLeft(2, '0');
+
+                if(day.DayOfWeek.ToString()=="Sunday" || day.DayOfWeek.ToString()=="Saturday" )
+                continue;
+
+                BatidaAleatoria batida = new BatidaAleatoria("", "");
+                batida.gerarBatida(day);
+                extratoAleatorio.AppendLine($"data: {dia}/{mes} horario: {batida.Entrada1.ToShortTimeString()} - {((DateTime)batida.Saida1).ToShortTimeString()} - {((DateTime)batida.Entrada2).ToShortTimeString()} - - {((DateTime)batida.Saida2).ToShortTimeString()}");
+            }
+
+            StreamWriter resultado = new StreamWriter("c:\\temp\\ExtratoAleatorio.txt", false, Encoding.ASCII);
+            resultado.Write(extratoAleatorio);
+            resultado.Close();
 
         }
 

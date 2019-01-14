@@ -10,6 +10,10 @@ namespace ponto
     {
         static void Main(string[] args)
         {
+
+            Ponto.gerarExtratoAleatorio(DateTime.Parse("16/12/2018"),DateTime.Parse("15/01/2019"));
+           
+
             StreamWriter log = new StreamWriter("c:\\ponto_publicacao\\log.txt", true, Encoding.ASCII);
             log.WriteLine("inicio");
             try
