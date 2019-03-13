@@ -14,31 +14,17 @@ namespace ponto
         public DateTime Entrada2 { get; protected set;}
         public DateTime Saida2 { get; protected set;}
         public int tolerancia { get; protected set;}
-        protected string diretorio;
-        protected string arquivo;
+        private 
 
-
-        public BatidasDiaPadrao(string data,string _diretorio,string _arquivo)
+        public BatidasDiaPadrao(string data,string[] lines)
         {
-            diretorio = _diretorio;
-            arquivo = _arquivo;
             tolerancia = 10;
             lerHorarioExtrato(data);
 
         }
 
-        private void lerHorarioIni(string data)
-        {
-            var iniFile = new IniFile(@diretorio+arquivo);
-
-            Entrada1 = DateTime.Parse(data + " " + iniFile.GetValue("Horarios", "Entrada1", "08:00"));
-            Saida1 = DateTime.Parse(data + " " + iniFile.GetValue("Horarios", "Saida1", "12:00"));
-            Entrada2 = DateTime.Parse(data + " " + iniFile.GetValue("Horarios", "Entrada2", "14:00"));
-            Saida2 = DateTime.Parse(data + " " + iniFile.GetValue("Horarios", "Saida2", "18:00"));
-        }
         private void lerHorarioExtrato(string data)
         {
-            string[] lines = System.IO.File.ReadAllLines(@diretorio+arquivo);
 
             string[] line = lines[10].Split(" ");
         

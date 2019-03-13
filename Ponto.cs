@@ -24,7 +24,7 @@ namespace ponto
         {
             diretorio = _diretorio;
             arquivo = _arquivo;
-            // CabecalhoBatidasNaoRegistradas();
+            CabecalhoBatidasNaoRegistradas();
 
         }
 
@@ -209,7 +209,7 @@ namespace ponto
             }
         }
 
-        static void CabecalhoBatidasNaoRegistradas(BatidasDia batidasDia)
+        static void CabecalhoBatidasNaoRegistradas()
         {
             batidas.AppendLine();
             batidas.AppendLine(@"               Entrada 1      Saida 1        Entrada 2      Saida 2        ");
